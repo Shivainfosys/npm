@@ -1,0 +1,16 @@
+echo "# npm" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Shivainfosys/npm.git
+git push -u origin main
+stage('NPM Install') {
+        steps{
+            sh 'pwd'
+            sh 'npm install'
+            sh 'npm install i -g @angular/cli'
+            sh 'node --version'
+        }
+        /*}*/
+    }
